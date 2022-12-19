@@ -1,10 +1,10 @@
-# Someone-stole-my-name Tap
+# homebrew-tap
 
 ## How do I install these formulae?
 
-`brew install someone-stole-my-name/tap/<formula>`
+`brew install someone-stole-my-name/homebrew-tap/<formula>`
 
-Or `brew tap someone-stole-my-name/tap` and then `brew install <formula>`.
+Or `brew tap someone-stole-my-name/homebrew-tap` and then `brew install <formula>`.
 
 ## Documentation
 
