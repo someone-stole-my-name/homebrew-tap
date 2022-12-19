@@ -9,8 +9,8 @@ class Kubent < Formula
   def install
     ldflags = %W[
       -s -w
-      -X main.version=#{Utils.git_head()}
-      -X main.gitSha=#{Utils.git_head()}
+      -X main.version=#{Utils.git_head}
+      -X main.gitSha=#{Utils.git_head}
     ]
 
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/kubent"
