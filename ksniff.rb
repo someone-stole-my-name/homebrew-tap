@@ -1,4 +1,4 @@
-class Ksniff1 < Formula
+class Ksniff < Formula
   desc "Kubectl plugin to ease sniffing on kubernetes pods using tcpdump and wireshark"
   homepage "https://github.com/eldadru/ksniff"
   license "Apache-2.0"
