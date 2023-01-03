@@ -1,23 +1,19 @@
 class Ksniff < Formula
   desc "Kubectl plugin to ease sniffing on kubernetes pods using tcpdump and wireshark"
   homepage "https://github.com/eldadru/ksniff"
-  license "Apache-2.0"
   url "https://github.com/eldadru/ksniff/releases/download/v1.6.2/ksniff.zip"
+  license "Apache-2.0"
 
   def install
-    on_linux do
+    if OS.linux?
       bin.install "kubectl-sniff"
-    end
-
-    on_macos do
-      on_arm do
+    elsif OS.mac?
+      if Hardware::CPU.arm?
         bin.install "kubectl-sniff-darwin-arm64" => "kubectl-sniff"
-      end
-      on_intel do
+      elsif Hardware::CPU.intel?
         bin.install "kubectl-sniff-darwin" => "kubectl-sniff"
       end
     end
-
     bin.install "static-tcpdump"
   end
 end
