@@ -1,5 +1,5 @@
 class Goss < Formula
-  desc "Quick and Easy server testing/validation"
+  desc "Quick and Easy server testing & validation"
   homepage "https://goss.rocks"
   license "Apache-2.0"
   head "https://github.com/goss-org/goss.git", branch: "master"
