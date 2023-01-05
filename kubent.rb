@@ -18,7 +18,6 @@ class Kubent < Formula
       ldflags += " -X main.version=v#{version}"
     end
 
-    system "go", "build", "-ldflags", ldflags, "./cmd/kubent"
-    bin.install "kubent"
+    system "go", "build", "-ldflags", ldflags, "-o", bin/"kubent", "./cmd/kubent"
   end
 end

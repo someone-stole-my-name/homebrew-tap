@@ -16,6 +16,6 @@ class Goss < Formula
       " -X main.version=v#{version}"
     end
 
-    system "go", "build", "-ldflags", ldflags, "./cmd/goss"
+    system "go", "build", "-ldflags", ldflags, "-o", bin/"goss", "./cmd/goss"
   end
 end
