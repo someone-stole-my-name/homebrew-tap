@@ -17,5 +17,6 @@ class Goss < Formula
     end
 
     system "go", "build", "-ldflags", ldflags, "./cmd/goss"
+    bin.install "goss"
   end
 end
