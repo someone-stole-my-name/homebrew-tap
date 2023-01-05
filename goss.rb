@@ -15,7 +15,6 @@ class Goss < Formula
     else
       " -X main.version=v#{version}"
     end
-
     system "go", "build", "-ldflags", ldflags, "./cmd/goss"
   end
 end
