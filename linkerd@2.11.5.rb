@@ -2,7 +2,7 @@ class LinkerdAT2115 < Formula
   desc "Command-line utility to interact with linkerd"
   homepage "https://linkerd.io"
   url "https://github.com/linkerd/linkerd2.git",
-      tag:      "stable-2.11.5"
+      tag: "stable-2.11.5"
   license "Apache-2.0"
 
   keg_only :versioned_formula
