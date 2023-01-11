@@ -6,12 +6,16 @@ class KubeLineage < Formula
   license "Apache-2.0"
   head "https://github.com/tohjustin/kube-lineage.git", branch: "master"
 
-  depends_on "git" => [:build]
   depends_on "go" => [:build]
   depends_on "make" => [:build]
 
   def install
     system "make", "build"
     bin.install "bin/kube-lineage" => "kubectl-lineage"
+  end
+
+  test do
+    run_output = shell_output("#{bin}/kubectl-lineage --help 2>&1")
+    assert_match "Display all dependencies or dependents of a Kubernetes object.", run_output
   end
 end
