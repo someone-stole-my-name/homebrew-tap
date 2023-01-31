@@ -6,6 +6,8 @@ class TerraformAT129 < Formula
   license "MPL-2.0"
   head "https://github.com/hashicorp/terraform.git", branch: "main"
 
+  keg_only :versioned_formula
+
   depends_on "go" => :build
 
   conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
